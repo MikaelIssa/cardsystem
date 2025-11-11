@@ -19,4 +19,40 @@ logs/	Här skapas loggfiler för varje våning, t.ex. . floor1.log, som visar ve
 Makefile	Den här filen används för att kompilera hela projektet med ett enkelt kommando: make.
 README.md	Här skriver du vad projektet handlar om, hur det fungerar, och hur du har tänkt.
 
-liten ändring här
+-----
+BASH 
+# Initiera nytt repo
+git init
+
+# Lägg till alla filer
+git add .
+
+# Gör en commit med meddelande
+git commit -m "Första commit"
+
+# Koppla till GitHub (HTTPS)
+git remote add origin https://github.com/<user>/<repo>.git
+
+# Pusha första gången (koppla branch)
+git push -u origin main
+
+# Pusha ändringar (efter första gången)
+git push
+
+# Hämta senaste från GitHub
+git pull
+
+# Se status på repo
+git status
+
+# Se brancher
+git branch
+
+# Skapa ny branch
+git checkout -b feature-x
+
+# Byt branch
+git checkout main
+
+# Slå ihop branch till main
+git merge feature-x
