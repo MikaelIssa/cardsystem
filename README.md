@@ -19,4 +19,4 @@ logs/	Här skapas loggfiler för varje våning, t.ex. . floor1.log, som visar ve
 Makefile	Den här filen används för att kompilera hela projektet med ett enkelt kommando: make.
 README.md	Här skriver du vad projektet handlar om, hur det fungerar, och hur du har tänkt.
 
-börjat med git.
+liten ändring här
