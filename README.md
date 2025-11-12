@@ -1,11 +1,31 @@
-struktur : 
-card-access-system/
-├── data/         # Här ligger alla CSV-filer: users.csv, admins.csv, cards.csv, floors.csv
-├── include/      # Header-filer (.hpp) för klasser och funktioner
-├── src/          # Implementering (.cpp) av all logik
-├── logs/         # Tillfälliga loggar för våningsaccess (ej persistent)
-├── Makefile      # Fil för att kompilera projektet
-└── README.md     # Dokumentation och förklaringa
+Börjar med att förstå kraven vad systemet kommer att göra::
+- Vilka roller som finns? ( User, Admin)
+- vilka funktioner ska varje roll ha?
+- vilka dataobjekt finns? ( User, Admin , Card Flooor) dessa kommer vi jobba med
+- Vad ska vara persistent (csv)
+- vad ska vara validerat ( emial , telefon, lösenord)?
+- vad ska inte krascha
+----------------
+
+nu kommer strukturen hur den ska byggas
+Main mappen CardSystem ska innehålla
+-  data mapp (csv filer)
+-  include (header filer .hpp) - alltså bluefrint till varje objekt
+-  src ( kodfilerna .cpp)
+- logs ( tillfälliga loggar)
+- MakeFile , kompilera koden med en extension
+- readme.md fil där jag ska dokummentera vad jag gjort och vad jag lärt mig och vad jag bör kolla extra på samt vad jag tagit med mig
+
+----
+Varje klass ska innehålla:
+- User ska innehålla ( id, name, email, phone, card)
+- Admin ska innehålla ( id, password, name, email, phone, card)
+- Card ska innehålla ( id, clearamceLevel)
+- Floor ska innehålla ( id, name, clearanceLevel, accesHistory)
+-----
+
+för att skippa buggar så jag tar en klass i taget som jag testar i min mian.cpp fil och kompilerar med Make
+- testar om det fungerar innan jag går vidare
 
 
 ---

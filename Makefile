@@ -1,6 +1,6 @@
 PROG = main.exe 							# Target file for executable
-SRC = 01_hello.cpp							# Source code files (when creating more source code files, you will need to add them here).
-CFLAGS = -g -std=c++17 -Wall -Werror		# Compile flags - instructions to the compiler (warnings, optimization, version etc)
+SRC = main.cpp src/User.cpp src/Card.cpp							# Source code files (when creating more source code files, you will need to add them here).
+CFLAGS = -g -std=c++17 -Wall -Werror 		# Compile flags - instructions to the compiler (warnings, optimization, version etc)
 LIBS = 										# Specific libraries
 CC=g++										# Compiler to be used
 

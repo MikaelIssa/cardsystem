@@ -2,12 +2,12 @@
 #define USER_HPP
 
 #include <string>
-#include <iostream>
 #include "Card.hpp" // vi skapar denna fil senare
 
 class User{
  //skapar en klass med privata variabler
     private:
+            std::string id;
             std::string name;
             std::string email;
             std::string phone;
@@ -19,7 +19,7 @@ class User{
         User(const std::string& id, const std::string& name, const std::string& email, const std::string& phone, const Card& card);
 
         //skapar getter för att hämta info
-        int getId() const;
+        std::string getId() const;
         std::string getName() const;
         std::string getEmail() const;
         std::string getPhone() const;
@@ -35,4 +35,5 @@ class User{
         //visar info
         void printInfo() const;
 
-}
+};
+#endif

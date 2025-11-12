@@ -1,7 +1,9 @@
-#include "User.hpp"
+#include "../include/User.hpp"
 #include <iostream>
  // vi skapar en ny user med objekten vi skickar in och sen kopplar jag varje paramter till klassens variabler
-User::User(const std::string& id, const std::string& name, const std::string& email, const std::string& phone,const Card& card)
+User::User(const std::string& id, const std::string& name,
+     const std::string& email, const std::string& phone,
+     const Card& card)
     : id(id), name(name), email(email), phone(phone), card(card) {}
 
 
