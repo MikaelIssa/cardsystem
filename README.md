@@ -40,39 +40,58 @@ Makefile	Den här filen används för att kompilera hela projektet med ett enkel
 README.md	Här skriver du vad projektet handlar om, hur det fungerar, och hur du har tänkt.
 
 -----
-BASH 
-# Initiera nytt repo
-git init
+error :
 
-# Lägg till alla filer
-git add .
+justerart min kodingen till att ../include/ --.hpp i min .cpp fil för att den ska nå min sökväg samt jag fick error i min Makefile då jag behövde ändra i SRC /include/...hpp nu fungerar
 
-# Gör en commit med meddelande
-git commit -m "Första commit"
+------------------------
+## 👤 User-klassen
 
-# Koppla till GitHub (HTTPS)
-git remote add origin https://github.com/<user>/<repo>.git
+User representerar en vanlig användare i systemet. Den innehåller:
 
-# Pusha första gången (koppla branch)
-git push -u origin main
+- ID (unikt)
+- Namn
+- E-post
+- Telefonnummer
+- Kort (med säkerhetsnivå)
 
-# Pusha ändringar (efter första gången)
-git push
+Jag har lagt till:
+- Konstruktor för att skapa en användare
+- Getters och setters för att hämta och ändra info
+- `printInfo()` för att skriva ut all data
 
-# Hämta senaste från GitHub
-git pull
+Testad i main.cpp och fungerar som det ska.
 
-# Se status på repo
-git status
+--------------------
+## 🪪 Card-klassen
 
-# Se brancher
-git branch
+Card representerar ett säkerhetskort som kopplas till en användare eller admin. Kortet innehåller:
 
-# Skapa ny branch
-git checkout -b feature-x
+- ID (unikt)
+- Säkerhetsnivå (int)
 
-# Byt branch
-git checkout main
+Jag har lagt till:
+- Konstruktor
+- Getters för att hämta ID och nivå
 
-# Slå ihop branch till main
-git merge feature-x
+Kortet används i både `User` och `Admin` för att hantera åtkomst.
+-------------------
+## 👨‍💼 Admin-klassen
+
+Jag har nu skapat `Admin`-klassen som representerar en administratör i systemet. Den innehåller:
+
+- ID (unikt)
+- Lösenord
+- Namn
+- E-post
+- Telefonnummer
+- Kort (med säkerhetsnivå)
+
+Jag har lagt till funktioner för att:
+- Skapa en admin med konstruktor
+- Hämta och ändra information (getters och setters)
+- Skriva ut all info med `printInfo()`
+
+Jag har också testat klassen i `main.cpp` och det fungerar som det ska. Nästa steg blir att bygga menylogik för att välja mellan användare, admin eller avsluta programmet.
+---------------------------------
+
